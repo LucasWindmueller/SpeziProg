@@ -88,6 +88,7 @@ def get_metrics():
 
 Startet den Service mit:
 ```bash
+cd data-service
 python -m uvicorn main:app --reload
 ```
 

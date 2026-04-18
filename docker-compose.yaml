@@ -1,0 +1,7 @@
+services:
+  data-service:
+    build:
+      context: .
+      dockerfile: data-service/Dockerfile
+    ports:
+      - "8000:8000"

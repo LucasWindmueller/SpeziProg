@@ -6,7 +6,7 @@ app = FastAPI()
 def load_metrics():
     values = []
 
-    with open('../data/Interest.csv', newline='', encoding='utf-8') as file:
+    with open('../data/interest.csv', newline='', encoding='utf-8') as file:
         reader = csv.reader(file)
 
         for row in reader:
@@ -53,3 +53,7 @@ def load_metrics():
 @app.get("/metrics")
 def get_metrics():
     return load_metrics()
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
